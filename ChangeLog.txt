@@ -1,0 +1,14 @@
+v5
+-Supports installing from either internal or external sd
+-Improved softmac updating code
+-Fixed utscript_sd (Thanks, namko)
+-Increased rootfs size to 256MB
+v4
+-Made some scripts executable in fixperms.sh
+v3
+-Added fixperms.sh
+v2
+-Upgrades through u-boot instead of recovery
+-Increased rootfs size for NAND >2GB
+v1
+-Initial release

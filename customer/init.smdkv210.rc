@@ -1,0 +1,34 @@
+on boot
+    mount debugfs /sys/kernel/debug /sys/kernel/debug
+
+    setprop ro.radio.noril yes
+
+# fake some battery state
+    setprop status.battery.state Slow
+    setprop status.battery.level 5
+    setprop status.battery.level_raw  50
+    setprop status.battery.level_scale 9
+
+# Permissions for System Server and daemons.
+    chown system system /sys/class/backlight/pwm-backlight/brightness
+
+# 3D init
+#service pvrsrvinit /system/vendor/bin/pvrsrvinit
+#    user root
+#    group root
+#    oneshot
+	
+################ urbetter properties here #################
+on boot
+    setprop ro.sf.lcd_density 120
+
+# Disable red flashing
+    setprop persist.sys.strictmode.visual 0
+
+
+setprop au.ui.enable_usb_switch true
+setprop au.ui.rotate180 true
+setprop au.ui.enable_rotation_switch true
+
+
+

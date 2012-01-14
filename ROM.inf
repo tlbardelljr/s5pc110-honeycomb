@@ -1,0 +1,12 @@
+# Please edit this file with a text editor that understands
+# UNIX line breaks (basically anything but Windows Notepad)
+
+# Format data partition before installing (removes apps)
+WIPE_DATA="true"
+
+# Here you can set the cache, data, and rootfs partition sizes (units = MiB)
+# Note: the following will be ignored and existing partitions will be used if WIPE_DATA="false"
+SIZE_CACHE=128
+SIZE_DATA=1536
+SIZE_ROOTFS=256
+# sdcard will get remaining space
